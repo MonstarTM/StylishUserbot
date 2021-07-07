@@ -14,12 +14,13 @@
 * [Pyrogram](https://github.com/pyrogram/pyrogram/contributors)
 
 ## Code Owners
+* [ME](https://github.com/mohsinhsn)
 * [Chsaiujwal](https://github.com/chsaiujwal)
 * [Aditya](https://github.com/Aditya-XD)
 * [Lakhac](https://github.com/Lakhac)
 * [InukaAsith](https://github.com/InukaAsith)
 * [SHRE-YANSH](https://github.com/SHRE-YANSH)
-* [ME](https://github.com/mohsinhsn)
+
 # String Session - Pyrogram 🖱
 ### Repl 🧨
 [![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://replit.com/@MIDHUNKMKM/StringGen)

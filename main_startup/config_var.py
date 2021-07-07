@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -43,14 +43,14 @@ class Config(object):
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     STRINGSESSION = os.environ.get("STRINGSESSION", None)
     ASSISTANT_START_PIC = os.environ.get(
-        "ASSISTANT_START_PIC", "https://telegra.ph//file/92c1a600394c723db90fc.jpg"
+        "ASSISTANT_START_PIC", "https://telegra.ph/file/5e2c600d79c7f9a005776.jpg"
     )
     STRINGSESSION_2 = os.environ.get("STRINGSESSION_2", None)
     STRINGSESSION_3 = os.environ.get("STRINGSESSION_3", None)
     STRINGSESSION_4 = os.environ.get("STRINGSESSION_4", None)
     LOAD_UNOFFICIAL_PLUGINS = bool(strtobool(str(os.environ.get("LOAD_UNOFFICIAL_PLUGINS", False))))
     PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL", False)
-    TZ = os.environ.get("TZ", "Asia/Kolkata")
+    TZ = os.environ.get("TZ", "Asia/Dhaka")
     MONGO_DB = os.environ.get("MONGO_DB", None)
     LOG_GRP = int(os.environ.get("LOG_GRP", False))
     COMMAND_HANDLER = os.environ.get("COMMAND_HANDLER", ".")
@@ -62,10 +62,10 @@ class Config(object):
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     FBAN_GROUP = int(os.environ.get("FBAN_GROUP", False))
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/DevsExpo/FridayUserbot"
+        "UPSTREAM_REPO", "https://github.com/MohsinHsn/StylishUserbot"
     )
     ALIVE_IMG = os.environ.get(
-        "ALIVE_IMG", "https://telegra.ph//file/b94f56dd76b158149992e.jpg"
+        "ALIVE_IMG", "https://telegra.ph/file/5e2c600d79c7f9a005776.jpg"
     )
     U_BRANCH = "master"
     HEROKU_URL = fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME)

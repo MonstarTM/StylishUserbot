@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by Mohsinhsn@Github, < https://github.com/Mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/Mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -39,7 +39,7 @@ async def start(client, message):
     bot_username = starkbot.username
     firstname = message.from_user.first_name
     user_id = message.from_user.id
-    starttext = f"`Hello, {firstname} ! Nice To Meet You, Well I Am {bot_name}, An Powerfull Assistant Bot To Talk And Do Many Things For My Master!`. \n\nPowered By [Friday Userbot](t.me/FridayOT)"
+    starttext = f"`Hello, {firstname} ! Nice To Meet You, Well I Am {bot_name}, An Powerfull Assistant Bot To Talk And Do Many Things For My Master!`. \n\nPowered By [Stylish Userbot](t.me/StylishUser)"
     mypic = Config.ASSISTANT_START_PIC
     if user_id not in all_user_s:
         await client.send_photo(
@@ -47,7 +47,7 @@ async def start(client, message):
             mypic,
             starttext,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Help Me ❓", url="t.me/Fridayot")]]
+                [[InlineKeyboardButton("Help Me ❓", url="t.me/StylishUser")]]
             ),
         )
         kok = await check_user(user_id)
@@ -261,7 +261,7 @@ async def tts_(client, message):
     metadata = extractMetadata(createParser(f"{kk.get(language)}.ogg"))
     if metadata and metadata.has("duration"):
         duration = metadata.get("duration").seconds
-    owoc = f"**TTS** \n**Detected Text Language :** `{dec_s.capitalize()}` \n**Speech Text :** `{kk.get(language)}` \n**Time Taken :** `{hmm_time}s` \n__Powered By @FridayOT__"
+    owoc = f"**TTS** \n**Detected Text Language :** `{dec_s.capitalize()}` \n**Speech Text :** `{kk.get(language)}` \n**Time Taken :** `{hmm_time}s` \n__Powered By @StylishUser__"
     await message.reply_audio(
         audio=f"{kk.get(language)}.ogg", caption=owoc, duration=duration
     )

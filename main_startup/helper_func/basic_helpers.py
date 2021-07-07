@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -25,7 +25,7 @@ from pyrogram.types import (
     Message,
 )
 
-from main_startup import Friday, Friday2, Friday3, Friday4
+from main_startup import Stylish, Stylish2, Stylish3, Stylish4
 from main_startup.config_var import Config
 
 import mimetypes
@@ -127,16 +127,16 @@ def get_readable_time(seconds: int) -> int:
 async def get_all_pros() -> list:
     """Get All Users , Sudo + Owners + Other Clients"""
     users = list(Config.SUDO_USERS)
-    ujwal = Friday.me
+    ujwal = Stylish.me
     users.append(ujwal.id)
-    if Friday2:
-        ujwal2 = Friday2.me
+    if Stylish2:
+        ujwal2 = Stylish2.me
         users.append(ujwal2.id)
-    if Friday3:
-        ujwal3 = Friday3.me
+    if Stylish3:
+        ujwal3 = Stylish3.me
         users.append(ujwal3.id)
-    if Friday4:
-        ujwal4 = Friday4.me
+    if Stylish4:
+        ujwal4 = Stylish4.me
         users.append(ujwal4.id)
     return users
 
@@ -177,7 +177,7 @@ def paginate_help(page_number, loaded_modules, prefix, is_official=True):
                         prefix, modulo_page, is_official
                     ),
                 ),
-                InlineKeyboardButton(text="Back 🔙", callback_data=f"backO_to_help_menu"),
+                InlineKeyboardButton(text="Back ⬅️", callback_data=f"backO_to_help_menu"),
                 InlineKeyboardButton(
                     text="Next ⏩",
                     callback_data="{}_next({})_{}".format(
@@ -194,7 +194,7 @@ def cb_wrapper(func):
         users = await get_all_pros()
         if cb.from_user.id not in users:
             await cb.answer(
-                "You Can't Access Me, Only My Master Can. Why Don't You Deploy Your Own Friday? - @FridayOT",
+                "You Can't Access Me, Only My Boss Can. Why Don't You Deploy Your Own StylishUB? - @StylishUser",
                 cache_time=0,
                 show_alert=True,
             )
@@ -226,7 +226,7 @@ def inline_wrapper(func):
                         InlineQueryResultArticle(
                             title="Sorry, Friend You Can't Use Me!",
                             input_message_content=InputTextMessageContent(
-                                "**Hai!** Well, I am Not For You, I Only Work For My Master. Why Don't You Deploy Your Own @FridayOT ?"
+                                "**Hai!** Well, I am Not For You, I Only Work For My Boss. Why Don't You Deploy Your Own @StylishUser ?"
                             ),
                         )
                     )
@@ -428,9 +428,9 @@ async def fetch_audio(client, message):
         warner_bros = await message.reply_to_message.download(
             progress=progress, progress_args=(message, c_time, f"`Downloading Audio!`")
         )
-        stark_cmd = f"ffmpeg -i {warner_bros} -map 0:a friday.mp3"
+        stark_cmd = f"ffmpeg -i {warner_bros} -map 0:a stylish.mp3"
         await runcmd(stark_cmd)
-        final_warner = "friday.mp3"
+        final_warner = "stylish.mp3"
     elif warner_stark.audio:
         await message.edit("`Download Started !`")
         final_warner = await message.reply_to_message.download(

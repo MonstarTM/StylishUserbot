@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -12,13 +12,13 @@ bsdb = db_x["bot_sdb"]
 
 default_text = """<b>Hello, {user_firstname}!
 This is A UserBot Of {boss_firstname}.</b>
-<i>My Master is Busy As For Now, You Can Wait For Sometime
-If He Needs To Talk To You, He Will Approve You!</i>
+<i>My Boss is Busy As For Now, You Can Wait For Sometime
+If S/he Needs To Talk To You, S/he Will Approve You!</i>
 
 <b><u>You Have {warns} Of Warns.</b></u>
 """
 
-default_thumb = "https://icon-icons.com/downloadimage.php?id=106660&root=1527/PNG/512/&file=shield_106660.png"
+default_thumb = "https://telegra.ph/file/5e2c600d79c7f9a005776.jpg"
 
 
 async def add_pm_text(text=default_text):

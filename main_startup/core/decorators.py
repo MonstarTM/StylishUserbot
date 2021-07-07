@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -26,10 +26,10 @@ from main_startup import (
     CMD_LIST,
     XTRA_CMD_LIST,
     Config,
-    Friday,
-    Friday2,
-    Friday3,
-    Friday4,
+    Stylish,
+    Stylish2,
+    Stylish3,
+    Stylish4,
     bot
 )
 from main_startup.config_var import Config
@@ -38,7 +38,7 @@ from main_startup.helper_func.basic_helpers import is_admin_or_owner
 from .helpers import edit_or_reply
 
 
-def friday_on_cmd(
+def stylish_on_cmd(
     cmd: list,
     group: int = 0,
     pm_only: bool = False,
@@ -118,7 +118,7 @@ def friday_on_cmd(
                     text += datetime_tz.strftime(
                         "**Date :** `%Y-%m-%d` \n**Time :** `%H:%M:%S`"
                     )
-                    text += "\n\n__You can Forward This to @FridayChat, If You Think This is Serious A Error!__"
+                    text += "\n\n__You can Forward This to @StylishUser, If You Think This is Serious A Error!__"
                     try:
                         await client.send_message(Config.LOG_GRP, text)
                     except BaseException:
@@ -154,19 +154,19 @@ def listen(filter_s):
                 text += datetime_tz.strftime(
                     "**Date :** `%Y-%m-%d` \n**Time :** `%H:%M:%S`"
                 )
-                text += "\n\n__You can Forward This to @FridayChat, If You Think This is A Error!__"
+                text += "\n\n__You can Forward This to @StylishUser, If You Think This is A Error!__"
                 try:
                     await client.send_message(Config.LOG_GRP, text)
                 except BaseException:
                     logging.error(text)
             message.continue_propagation()
-        Friday.add_handler(MessageHandler(wrapper, filters=filter_s), group=0)
-        if Friday2:
-            Friday2.add_handler(MessageHandler(wrapper, filters=filter_s), group=0)
-        if Friday3:
-            Friday3.add_handler(MessageHandler(wrapper, filters=filter_s), group=0)
-        if Friday4:
-            Friday4.add_handler(MessageHandler(wrapper, filters=filter_s), group=0)
+        Stylish.add_handler(MessageHandler(wrapper, filters=filter_s), group=0)
+        if Stylish2:
+            Stylish2.add_handler(MessageHandler(wrapper, filters=filter_s), group=0)
+        if Stylish3:
+            Stylish3.add_handler(MessageHandler(wrapper, filters=filter_s), group=0)
+        if Stylish4:
+            Stylish4.add_handler(MessageHandler(wrapper, filters=filter_s), group=0)
         return wrapper
 
     return decorator
@@ -212,10 +212,10 @@ def add_handler(filter_s, func_, cmd):
             d_c_l.extend(['eval', 'bash', 'install']) 
         if any(item in list(d_c_l) for item in list(cmd)): 
             filter_s = (filters.me & filters.command(cmd, Config.COMMAND_HANDLER) & ~filters.via_bot & ~filters.forwarded)
-    Friday.add_handler(MessageHandler(func_, filters=filter_s), group=0)
-    if Friday2:
-        Friday2.add_handler(MessageHandler(func_, filters=filter_s), group=0)
-    if Friday3:
-        Friday3.add_handler(MessageHandler(func_, filters=filter_s), group=0)
-    if Friday4:
-        Friday4.add_handler(MessageHandler(func_, filters=filter_s), group=0)      
+    Stylish.add_handler(MessageHandler(func_, filters=filter_s), group=0)
+    if Stylish2:
+        Stylish2.add_handler(MessageHandler(func_, filters=filter_s), group=0)
+    if Stylish3:
+        Stylish3.add_handler(MessageHandler(func_, filters=filter_s), group=0)
+    if Stylish4:
+        Stylish4.add_handler(MessageHandler(func_, filters=filter_s), group=0)      

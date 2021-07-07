@@ -1,11 +1,11 @@
-<p align="center"><a href="https://t.me/fridayot"><img src="https://telegra.ph/file/22535f8051a58af113586.jpg" width="5000"></a></p> 
-<h1 align="center"><b>FRIDAY-USERBOT 🇮🇳 </b></h1>
+<p align="center"><a href="https://t.me/Englishchatting_Club"><img src="https://telegra.ph/file/cfacfed1a56698690ef5e.jpg" width="5000"></a></p> 
+<h1 align="center"><b>Stylish-Userbot🇧🇩 </b></h1>
 <h4 align="center">A Powerful, Smart And Simple Userbot In Pyrogram.</h4>
 
 
 ## Support 🚑
-<a href="https://t.me/FridaySupportOfficial"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
-<a href="https://t.me/fridayOT"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
+<a href="https://t.me/englishchatting_club"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
+<a href="https://t.me/englishchatting_club"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
 ## Inspiration & Credits
 * [Userge-X](https://github.com/code-rgb/USERGE-X/contributors)
@@ -19,7 +19,7 @@
 * [Lakhac](https://github.com/Lakhac)
 * [InukaAsith](https://github.com/InukaAsith)
 * [SHRE-YANSH](https://github.com/SHRE-YANSH)
-
+* [ME](https://github.com/mohsinhsn)
 # String Session - Pyrogram 🖱
 ### Repl 🧨
 [![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://replit.com/@MIDHUNKMKM/StringGen)
@@ -34,7 +34,7 @@ $ python(3) string_gen.py
 
 ### Deploying To Heroku ⚙
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DevsExpo/FridayUserbot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mohsinhsn/FridayUserbot)
 
 ### Self-hosting (For Devs) ⚔
 ```sh

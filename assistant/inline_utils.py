@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/mohsinhsn/stylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -36,7 +36,7 @@ from pyrogram.types import (
 )
 from tinydb import Query, TinyDB
 from main_startup.core.startup_helpers import run_cmd
-from main_startup import CMD_LIST, XTRA_CMD_LIST, Friday, bot, friday_version
+from main_startup import CMD_LIST, XTRA_CMD_LIST, Stylish, bot, Stylish_version
 from main_startup.config_var import Config
 from youtubesearchpython import SearchVideos
 from main_startup.helper_func.basic_helpers import (
@@ -71,7 +71,7 @@ async def owo(client, inline_query):
         user, msg = ok.split(";")
         fu = int(user) if user.isdigit() else user
         try:
-            ui = await Friday.get_users(fu)
+            ui = await Stylish.get_users(fu)
         except BaseException as e:
             logging.error(str(e))
             return
@@ -197,7 +197,7 @@ async def owo(client, inline_query):
         user, msg = ok.split(";")
         fu = int(user) if user.isdigit() else user
         try:
-            ui = await Friday.get_users(fu)
+            ui = await Stylish.get_users(fu)
         except BaseException as e:
             logging.error(str(e))
             return
@@ -255,7 +255,7 @@ async def owo(client, inline_query):
         ]
         if Config.LOAD_UNOFFICIAL_PLUGINS:
             total_ = len(XTRA_CMD_LIST) + len(CMD_LIST)
-        nice_text = f"**FridayUserBot Commands** \n**Friday Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{total_}__"
+        nice_text = f"**StylishUserBot Commands** \n**Stylish Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{total_}__"
         await client.answer_inline_query(
             inline_query.id,
             cache_time=0,
@@ -376,7 +376,7 @@ async def black_menu(client, cb):
         ]
     if Config.LOAD_UNOFFICIAL_PLUGINS:
         total_ = len(XTRA_CMD_LIST) + len(CMD_LIST)
-    nice_text = f"**FridayUserBot Commands** \n**Friday Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{total_}__"
+    nice_text = f"**StylishUserBot Commands** \n**Stylish Version :** __{stylish_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{total_}__"
     await cb.edit_message_text(nice_text, reply_markup=InlineKeyboardMarkup(bttn))
 
 @bot.on_callback_query(filters.regex(pattern="make_cmd_buttons"))
@@ -390,7 +390,7 @@ async def cmd_buutton(client, cb):
             ],
             [
                 InlineKeyboardButton(
-                    text="Back 🔙", callback_data=f"backO_to_help_menu"
+                    text="Back ⬅️", callback_data=f"backO_to_help_menu"
                 )
             ]
         ]
@@ -411,7 +411,7 @@ async def cmd_buutton(client, cb):
                 ],
                 [
                     InlineKeyboardButton(
-                        text="Back 🔙", callback_data=f"backO_to_help_menu"
+                        text="Back ⬅️", callback_data=f"backO_to_help_menu"
                     )
                 ]
             ]
@@ -423,7 +423,7 @@ async def roaststart(client, cb):
     bttn = [
         [
                 InlineKeyboardButton(
-                    text="Back 🔙", callback_data=f"backO_to_help_menu"
+                    text="Back ⬅️", callback_data=f"backO_to_help_menu"
                 )
             ]
     ]
@@ -438,7 +438,7 @@ async def update_it(client, cb):
     bttn = [
         [
                 InlineKeyboardButton(
-                    text="Back 🔙", callback_data=f"backO_to_help_menu"
+                    text="Back ⬅️", callback_data=f"backO_to_help_menu"
                 )
             ]
     ]
@@ -447,7 +447,7 @@ async def update_it(client, cb):
         repo = Repo()
     except GitCommandError:
         return await cb.edit_message_text(
-            "`Invalid Git Command. Please Report This Bug To @FridayOT`",
+            "`Invalid Git Command. Please Report This Bug To @stylishuser`",
             reply_markup=InlineKeyboardMarkup(bttn)
         )
     except InvalidGitRepositoryError:
@@ -498,7 +498,7 @@ async def fuck_arch_btw(client, cb):
     bttn = [
         [
                 InlineKeyboardButton(
-                    text="Back 🔙", callback_data=f"backO_to_help_menu"
+                    text="Back ⬅️", callback_data=f"backO_to_help_menu"
                 )
             ]
     ]
@@ -552,7 +552,7 @@ async def wow_nice(client, cb):
         v_t = CMD_LIST
         bttn = paginate_help(0, CMD_LIST, "helpme", is_official=nice)
     await cb.edit_message_text(
-        f"Command List & Help \n**Total Commands :** `{len(v_t)}` \n**(C) @FRIDAYOT**",
+        f"Command List & Help \n**Total Commands :** `{len(v_t)}` \n**(C) @stylishuser**",
         reply_markup=InlineKeyboardMarkup(bttn),
     )
 
@@ -572,7 +572,7 @@ async def get_back_vro(client, cb):
         is_official = False
     cmd_list = CMD_LIST if is_official else XTRA_CMD_LIST
     buttons = paginate_help(page_number, cmd_list, "helpme", is_official=is_official)
-    nice_text = f"**FridayUserBot Commands & Help Menu!** \n\n**Friday Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{len(CMD_LIST)}__"
+    nice_text = f"**StylishUserBot Commands & Help Menu!** \n\n**Stylish Version :** __{stylish_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{len(CMD_LIST)}__"
     await cb.edit_message_text(nice_text, reply_markup=InlineKeyboardMarkup(buttons))
 
 
@@ -585,7 +585,7 @@ async def give_plugin_cmds(client, cb):
         is_official = False
     cmd_list = CMD_LIST if is_official else XTRA_CMD_LIST
     help_string = f"**💡 PLUGIN NAME 💡 :** `{plugin_name}` \n{cmd_list[plugin_name]}"
-    help_string += "\n\n**(C) @FRIDAYOT** ".format(plugin_name)
+    help_string += "\n\n**(C) @stylishuser** ".format(plugin_name)
     await cb.edit_message_text(
         help_string,
         reply_markup=InlineKeyboardMarkup(

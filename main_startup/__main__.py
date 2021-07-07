@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -14,12 +14,12 @@ import pyrogram
 from pyrogram import __version__
 
 from main_startup import (
-    Friday,
-    Friday2,
-    Friday3,
-    Friday4,
+    Stylish,
+    Stylish2,
+    Stylish3,
+    Stylish4,
     bot,
-    friday_version,
+    stylish_version,
     mongo_client,
 )
 from main_startup.core.startup_helpers import (
@@ -67,7 +67,7 @@ async def fetch_plugins_from_channel():
             if os.path.exists(os.path.join("./plugins/", hmm)):
                 pass
             else:
-                await Friday.download_media(message, file_name="./plugins/")
+                await stylish.download_media(message, file_name="./plugins/")
     except BaseException as e:
         logging.error(f"Failed! To Install Plugins From Plugin Channel Due To {e}!")
         return
@@ -90,21 +90,21 @@ async def run_bot():
                 load_plugin(mods, assistant=True)
             except Exception as e:
                 logging.error("[ASSISTANT] - Failed To Load : " + f"{mods} - {str(e)}")
-    await Friday.start()
-    Friday.me = await Friday.get_me()
-    Friday.has_a_bot = True if bot else False
-    if Friday2:
-        await Friday2.start()
-        Friday2.me = await Friday2.get_me()
-        Friday2.has_a_bot = True if bot else False
-    if Friday3:
-        await Friday3.start()
-        Friday3.me = await Friday3.get_me()
-        Friday3.has_a_bot = True if bot else False
-    if Friday4:
-        await Friday4.start()
-        Friday4.me = await Friday4.get_me()
-        Friday4.has_a_bot = True if bot else False
+    await Stylish.start()
+    Stylish.me = await Stylish.get_me()
+    Stylish.has_a_bot = True if bot else False
+    if Stylish2:
+        await Stylish2.start()
+        Stylish2.me = await Stylish2.get_me()
+        Stylish2.has_a_bot = True if bot else False
+    if Stylish3:
+        await Stylish3.start()
+        Stylish3.me = await Stylish3.get_me()
+        Stylish3.has_a_bot = True if bot else False
+    if Stylish4:
+        await Stylish4.start()
+        Stylish4.me = await Stylish4.get_me()
+        Stylish4.has_a_bot = True if bot else False
     if Config.PLUGIN_CHANNEL:
         await fetch_plugins_from_channel()
     needed_mods = plugin_collecter("./plugins/")
@@ -115,14 +115,14 @@ async def run_bot():
             logging.error("[USER] - Failed To Load : " + f"{nm} - {str(e)}")
     if Config.LOAD_UNOFFICIAL_PLUGINS:
         await load_unofficial_modules()
-    full_info = f"""Friday Based On Pyrogram V{__version__}
+    full_info = f"""Stylish Based On Pyrogram V{__version__}
 Python Version : {platform.python_version()}
-Friday Version : {friday_version}
-You Can Visit @FridaySupportOfficial For Updates And @FridayChat For Any Query / Help!
+Stylish Version : {stylish_version}
+You Can Visit @StylishUser For Updates & Any Query / Help!
 """
     logging.info(full_info)
     await pyrogram.idle()
 
 
 if __name__ == "__main__":
-    Friday.loop.run_until_complete(run_bot())
+    Stylish.loop.run_until_complete(run_bot())

@@ -14,7 +14,7 @@
 * [Pyrogram](https://github.com/pyrogram/pyrogram/contributors)
 
 ## Code Owners
-* [ME](https://github.com/mohsinhsn)
+* [Mohsin](https://github.com/mohsinhsn)
 * [Chsaiujwal](https://github.com/chsaiujwal)
 * [Aditya](https://github.com/Aditya-XD)
 * [Lakhac](https://github.com/Lakhac)
@@ -26,8 +26,8 @@
 [![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://replit.com/@MIDHUNKMKM/StringGen)
 ### Locally 🏆
 ```
-$ git clone https://github.com/DevsExpo/FridayUserbot
-$ cd FridayUserbot
+$ git clone https://github.com/mohsinhsn/stylishUserbot
+$ cd stylishUserbot
 $ python(3) string_gen.py
 ```
 
@@ -40,9 +40,9 @@ $ python(3) string_gen.py
 ### Self-hosting (For Devs) ⚔
 ```sh
 # Install Git First // (Else You Can Download And Upload to Your Local Server)
-$ git clone https://github.com/DevsExpo/FridayUserbot
+$ git clone https://github.com/mohsinhsn/stylishUserbot
 # Open Git Cloned File
-$ cd FridayUserbot
+$ cd stylishUserbot
 # Install All Requirements 
 $ pip(3) install -r requirements.txt
 # Create local.env with variables as given below
@@ -59,7 +59,7 @@ $ python(3) -m main_startup
     [-] STRINGSESSION : Your String Session, You can get this From Repl or BY running String_Gen File Locally
     [-] MONGO_DB : Your Mongo DB DataBase Url. 
     [-] LOG_GRP: Your Log Group/Channel Chat ID. This is Very Important and Some Modules Will Not Work Well Without This!
-[+] The fridayUserbot will not work without setting the mandatory vars.
+[+] The stylishUserbot will not work without setting the mandatory vars.
 ```
 
 # Examples - Plugins 👊
@@ -97,7 +97,7 @@ async def mentioned_(client, message):
 
 * Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
 
-FridayUserbot is Free Software: You can use, study share and improve it at your
+StylishUserbot is Free Software: You can use, study share and improve it at your
 will. Specifically you can redistribute and/or modify it under the terms of the
 [GNU General Public License](https://www.gnu.org/licenses/gpl.html) as
 published by the Free Software Foundation, either version 3 of the License, or

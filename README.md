@@ -1,11 +1,11 @@
-<p align="center"><a href="https://t.me/Englishchatting_Club"><img src="https://telegra.ph/file/cfacfed1a56698690ef5e.jpg" width="5000"></a></p> 
+<p align="center"><a href="https://t.me/stylishUser"><img src="https://telegra.ph/file/5e2c600d79c7f9a005776.jpg" width="5000"></a></p> 
 <h1 align="center"><b>Stylish-Userbot🇧🇩 </b></h1>
 <h4 align="center">A Powerful, Smart And Simple Userbot In Pyrogram.</h4>
 
 
 ## Support 🚑
-<a href="https://t.me/englishchatting_club"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
-<a href="https://t.me/englishchatting_club"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
+<a href="https://t.me/StylishUser"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
+<a href="https://t.me/StylishUser"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
 ## Inspiration & Credits
 * [Userge-X](https://github.com/code-rgb/USERGE-X/contributors)
@@ -35,7 +35,7 @@ $ python(3) string_gen.py
 
 ### Deploying To Heroku ⚙
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mohsinhsn/FridayUserbot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mohsinhsn/StylishUserbot)
 
 ### Self-hosting (For Devs) ⚔
 ```sh
@@ -70,7 +70,7 @@ $ python(3) -m main_startup
 from main_startup.core.decorators import friday_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply
 
-@friday_on_cmd(['helloworld'],
+@stylish_on_cmd(['helloworld'],
     cmd_help={
     "help": "This is A TEST",
     "example": "{ch}helloworld"
@@ -89,13 +89,13 @@ async def mentioned_(client, message):
 ```
 
 # X-Tra Plugins 🎸
-* Please Visit [Xtra-Plugins](https://github.com/DevsExpo/Xtra-Plugins) To Checkout Xtra-Plugins.
+* Please Visit [Xtra-Plugins](https://github.com/mohsinhsn/Xtra-Plugins) To Checkout Xtra-Plugins.
 
 
 # Licence 📋
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
 
-* Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+* Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 
 StylishUserbot is Free Software: You can use, study share and improve it at your
 will. Specifically you can redistribute and/or modify it under the terms of the

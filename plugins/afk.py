@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -13,7 +13,7 @@ from pyrogram import filters
 
 from database.afk import check_afk, go_afk, no_afk
 from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd, listen
+from main_startup.core.decorators import stylish_on_cmd, listen
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 from main_startup.helper_func.logger_s import LogIt
 
@@ -31,7 +31,7 @@ async def is_afk_(f, client, message):
 is_afk = filters.create(func=is_afk_, name="is_afk_")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["afk"],
     propagate_to_next_handler=False,
     cmd_help={
@@ -47,7 +47,7 @@ async def set_afk(client, message):
     afk_start = start_1.replace(microsecond=0)
     log = LogIt(message)
     if msge:
-        msg = f"**My Master Seems To Be Too Busy 👀.** \n__He Going Afk Because Of__ `{msge}`"
+        msg = f"**My Boss Seems To Be Too Busy 👀.** \n__s/He Going Afk Because Of__ `{msge}`"
         await log.log_msg(
             client,
             f"#AfkLogger Afk Is Active And Reason is {msge}",
@@ -83,7 +83,7 @@ async def afk_er(client, message):
         afk_sanity_check[use_r] += 1
     if afk_sanity_check[use_r] == 5:
         await message.reply_text(
-            "`I Told You 5 Times That My Master Isn't Available, Now I Will Not Reply To You. ;(`"
+            "`I Told You 5 Times That My Boss Isn't Available, Now I Will Not Reply To You. ;(`"
         )
         afk_sanity_check[use_r] += 1
         return

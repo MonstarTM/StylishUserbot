@@ -1,19 +1,16 @@
 import pyrogram
 from pyrogram import Client
 
-friday_ = """
-╔═══╗───╔═╗─╔═╗
-║ ══╬═╦═╬═╬═╝ ╠═══╦═╦═╗
-║ ╔═╣ ╔═╣ ║╔╗ ║╔╗ ╠══ ║
-╚═╝ ╚═╝ ╚═╩═══╩═╩═╩═══╝
-Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
-This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+Stylish_ = """
+☪️☪️☪️☪️
+Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
+This file is part of < https://github.com/mohsinhsn/StylishUserBot > project,
 and is released under the "GNU v3.0 License Agreement".
-Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 All rights reserved.
 """
 
-print(friday_)
+print(stylish_)
 
 api_id = input("Enter Your API ID: \n")
 api_hash = input("Enter Your API HASH : \n")

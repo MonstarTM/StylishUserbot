@@ -1,17 +1,17 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
 nowtime=$(date)
 echo "
-FridayUserBot
+StylishUserBot
 
-(C) @FridayOT
-Powered By @DevsExpo.
+(C) @StylishUser
+Powered By @Monstar_0.
 Time : $nowtime
 "
 update_and_install_packages () {
@@ -39,8 +39,8 @@ ech_final () {
 =+---------------------------------------------------------+=
 Deployment Sucessfull.
 Docker Images Are Being Pushed, Please Wait.
-Thank You For Installing FridayUB.
-(C) @DevsExpo
+Thank You For Installing StylishUB.
+(C) @monstar_0
 =+---------------------------------------------------------+=
 
     "

@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/Mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -10,11 +10,11 @@ from pyrogram import filters
 
 from database.welcomedb import add_welcome, del_welcome, welcome_info
 from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd, listen
+from main_startup.core.decorators import stylish_on_cmd, listen
 from main_startup.helper_func.basic_helpers import edit_or_reply
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["savewelcome"],
     cmd_help={
         "help": "Save Welcome Message!",
@@ -78,7 +78,7 @@ async def is_media(message):
     return True
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["delwelcome"],
     cmd_help={"help": "Delete welcome Message!", "example": "{ch}delwelcome"},
 )
@@ -91,7 +91,7 @@ async def del_welcomez(client, message):
     await note_.edit(f"`Welcome Message Deleted Successfully!`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["welcome"],
     cmd_help={"help": "Current Welcome Message!", "example": "{ch}welcome"},
 )

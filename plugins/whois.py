@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/Mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -10,7 +10,7 @@ import os
 
 from database.gbandb import gban_info, gban_list, gban_user, ungban_user
 from database.gmutedb import gmute, is_gmuted, ungmute
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -21,7 +21,7 @@ from main_startup.helper_func.basic_helpers import (
 from plugins import devs_id
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["get_id"],
     cmd_help={"help": "Get Current Chat ID!", "example": "{ch}get_id"},
 )
@@ -30,9 +30,9 @@ async def wew_id(client, message):
     pablo = await edit_or_reply(message, t_xt)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["info", "whois"],
-    cmd_help={"help": "Get Info About A User", "example": "{ch}info @chsaiujwal"},
+    cmd_help={"help": "Get Info About A User", "example": "{ch}info @tithonus"},
 )
 async def whois(client, message):
     user_photo = None

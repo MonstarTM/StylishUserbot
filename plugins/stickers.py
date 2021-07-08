@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/Mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -20,12 +20,12 @@ from pyrogram.errors import StickersetInvalid, YouBlockedUser
 from pyrogram.raw.functions.messages import GetStickerSet
 from pyrogram.raw.types import InputStickerSetShortName
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 from main_startup.helper_func.plugin_helpers import convert_to_image
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["packinfo"],
     cmd_help={
         "help": "Get Sticker Pack Info!",
@@ -66,7 +66,7 @@ async def packinfo(client, message):
     await pablo.edit(output)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["kang"],
     cmd_help={
         "help": "Get Sticker Pack Info!",
@@ -88,7 +88,7 @@ async def packinfo(client, message):
     else:
         name = message.from_user.first_name
     packname = f"@{nm} Kang Pack {pack}"
-    packshortname = f"FRIDAY_{message.from_user.id}_{pack}"
+    packshortname = f"STYLISH_{message.from_user.id}_{pack}"
     non = [None, "None"]
     emoji = "😁"
     try:
@@ -150,7 +150,7 @@ async def packinfo(client, message):
             prev_pack = int(pack) - 1
             await pablo.edit(f"Kang Pack Vol __{prev_pack}__ is Full! Switching To Vol __{pack}__ Kang Pack")
             packname = f"@{nm} Kang Pack {pack}"
-            packshortname = f"FRIDAY_{message.from_user.id}_{pack}"
+            packshortname = f"STYLISH_{message.from_user.id}_{pack}"
             if is_anim:
                 packshortname += "_animated"
                 packname += " Animated"

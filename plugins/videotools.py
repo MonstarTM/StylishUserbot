@@ -1,15 +1,15 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/Mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
 import os
 import time
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.core.startup_helpers import run_cmd
 from main_startup.helper_func.basic_helpers import (
     edit_or_reply,
@@ -20,7 +20,7 @@ from main_startup.helper_func.basic_helpers import (
 from main_startup.helper_func.plugin_helpers import convert_vid_to_vidnote
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["getsrt", "extractsubtitle"],
     cmd_help={
         "help": "Get Subtitle / Srt from Any Video",
@@ -65,7 +65,7 @@ async def get_str(client, message):
             os.remove(files)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["fastforward"],
     cmd_help={
         "help": "Make Any Video / Gif Fast! (Fast Forward)",
@@ -111,7 +111,7 @@ async def hell_speed_s(client, message):
             os.remove(files)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["slowdown"],
     cmd_help={
         "help": "Make Any Video / Gif Slow! (Slow Down)",
@@ -157,7 +157,7 @@ async def fking_slow(client, message):
             os.remove(files)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["vidnote"],
     cmd_help={
         "help": "Make Any Video / Gif To Video Note",

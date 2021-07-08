@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -12,7 +12,7 @@ from pyrogram import filters
 from database.gbandb import gban_info, gban_list, gban_user, ungban_user
 from database.gmutedb import gmute, is_gmuted, ungmute
 from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd, listen
+from main_startup.core.decorators import stylish_on_cmd, listen
 from main_startup.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -24,7 +24,7 @@ from main_startup.helper_func.logger_s import LogIt
 from plugins import devs_id
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["gmute"],
     cmd_help={
         "help": "Globally Mute The User!",
@@ -64,7 +64,7 @@ async def gmute_him(client, message):
     await log.log_msg(client, gmu)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["ungmute"],
     cmd_help={
         "help": "Globally UnMute The User!",
@@ -99,7 +99,7 @@ async def gmute_him(client, message):
     await log.log_msg(client, ugmu)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["gban"],
     cmd_help={
         "help": "Globally Ban The User!",
@@ -152,7 +152,7 @@ async def gbun_him(client, message):
     await log.log_msg(client, gbanned)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["ungban"],
     cmd_help={
         "help": "Globally Unban The User!",
@@ -229,7 +229,7 @@ async def watch(client, message):
     
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["gbanlist"],
     cmd_help={
         "help": "Get List Of Globally Banned Users!",
@@ -248,7 +248,7 @@ async def give_glist(client, message):
     await edit_or_send_as_file(oof, glist, client, "GbanList", "Gban-List")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["gbroadcast"],
     cmd_help={
         "help": "Send Message To All Chats, You Are In!",

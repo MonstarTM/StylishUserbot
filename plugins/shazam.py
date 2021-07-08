@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/mohsinhsn/stylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -10,11 +10,11 @@ import os
 
 import requests
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, fetch_audio
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["shazam", "sreverse", "identify"],
     cmd_help={
         "help": "Reverse Search The Song!",
@@ -56,7 +56,7 @@ async def shazamm(client, message):
 <b>Song Name : </b>{title}
 <b>Song By : </b>{by}
 
-<u><b>Identified Using Friday - Get Your Friday From</b></u>
+<u><b>Identified Using StylishUB - Get Your StylishUB From</b></u>
 """
     await client.send_photo(message.chat.id, image, messageo, parse_mode="HTML")
     await kek.delete()

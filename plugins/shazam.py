@@ -26,8 +26,8 @@ async def shazamm(client, message):
     if not message.reply_to_message:
         await kek.edit("Reply To The Audio.")
         return
-    if os.path.exists("friday.mp3"):
-        os.remove("friday.mp3")
+    if os.path.exists("stylish.mp3"):
+        os.remove("stylish.mp3")
     kkk = await fetch_audio(client, message)
     downloaded_file_name = kkk
     f = {"file": (downloaded_file_name, open(downloaded_file_name, "rb"))}

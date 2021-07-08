@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from faker import Faker
 from faker.providers import internet
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import (
     delete_or_pass,
     edit_or_reply,
@@ -16,7 +16,7 @@ from main_startup.helper_func.basic_helpers import (
 )
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["fakegen", "fakedata"],
     cmd_help={"help": "Generate Random Fake Details", "example": "{ch}fakegen"},
 )
@@ -38,7 +38,7 @@ async def gen_fake_details(client, message):
     )
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["short"],
     cmd_help={"help": "Shorten URL link!", "example": "{ch}short link"},
 )
@@ -59,7 +59,7 @@ async def vom(client, message):
     await event.edit(bestisbest)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["rmeme", "randomeme"],
     cmd_help={"help": "Generate Random Memes!", "example": "{ch}rmeme"},
 )
@@ -71,7 +71,7 @@ async def givemememe(client, message):
     await delete_or_pass(message)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["binlookup", "bin"],
     cmd_help={"help": "Get Details About Bin!", "example": "{ch}bin (bin number)"},
 )
@@ -99,7 +99,7 @@ async def nobin(client, message):
     await stark_m.edit(data_is, parse_mode="html")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["iban", "ibaninfo"],
     cmd_help={"help": "Get Details About IBAN", "example": "{ch}iban (iban here)"},
 )
@@ -129,7 +129,7 @@ async def ibanbanem(client, message):
     await stark_m.edit(kek, parse_mode="html")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["apk_dl", "apkpure"],
     cmd_help={"help": "APK Downloader", "example": "{ch}apk_dl (app name)"},
 )
@@ -169,7 +169,7 @@ async def giveapkbro(client, message):
     await stark_m.edit("`Apk Downloaded To My Servers, Now Starting To Upload Here!`")
     e_time = time.time()
     hmm_time = round(e_time - c_time)
-    caption_eh = f"**App Name :** `{name}` \n**Time Taken :** `{hmm_time}` \n**Uploaded Using FridayUserBot**"
+    caption_eh = f"**App Name :** `{name}` \n**Time Taken :** `{hmm_time}` \n**Uploaded Using StylishUserBot**"
     await message.reply_document(
         final_path,
         progress=progress,

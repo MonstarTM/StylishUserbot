@@ -1,17 +1,17 @@
 {
-  "name": "Friday-Userbot",
+  "name": "Stylish-Userbot",
   "description": "A Userbot Based On Pyrogram.",
-  "logo": "https://telegra.ph/file/b4e1e36c6b1fcb32dd997.jpg",
+  "logo": "https://telegra.ph/file/5e2c600d79c7f9a005776.jpg",
   "keywords": [
     "telegram",
-    "fridaybot",
+    "stylishbot",
     "plugin",
-    "fridaybot",
+    "stylishbot",
     "productivity"
   ],
-  "repository": "https://github.com/starkgang/FridayUserbot",
-  "website": "t.me/fridayot",
-  "success_url": "t.me/FridayOT",
+  "repository": "https://github.com/Mohsinhsn/StylishUserbot",
+  "website": "t.me/stylishUser",
+  "success_url": "t.me/stylishUser",
   "stack": "container",
   "env": {
     "API_ID": {
@@ -49,7 +49,7 @@
     },
     "UPSTREAM_REPO": {
       "description": "Your Upstream URL HERE. If You're Beginner, Don't Change This.",
-      "value": "https://github.com/DevsExpo/FridayUserBot",
+      "value": "https://github.com/MohsinHsn/StylishUserBot",
       "required": false
     },
     "BOT_TOKEN": {
@@ -59,7 +59,7 @@
     },
     "TZ": {
       "description": "Your Time Zone",
-      "value": "Asia/Kolkata"
+      "value": "Asia/Dhaka"
     },
     "STRINGSESSION": {
       "description": "String Session, Run string_gen.py to get String Session.",

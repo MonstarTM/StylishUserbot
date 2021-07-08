@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/mohsinhsn/stylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -13,7 +13,7 @@ import traceback
 
 import requests
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.core.startup_helpers import run_cmd
 from main_startup.helper_func.basic_helpers import (
     edit_or_reply,
@@ -72,10 +72,10 @@ langs = [
 EVAL = "**▶ Code :** \n`{code}` \n\n**▶ Output / TraceBack :** \n`{result}`"
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     cmd=["exec", "eval"],
     ignore_errors=True,
-    cmd_help={"help": "Run Python Code!", "example": '{ch}eval print("FridayUserBot")'},
+    cmd_help={"help": "Run Python Code!", "example": '{ch}eval print("StylishUserBot")'},
 )
 async def eval(client, message):
     stark = await edit_or_reply(message, "`Running Code... Please Wait!`")
@@ -125,7 +125,7 @@ async def aexec(code, client, message):
     return await locals()["__aexec"](client, message)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     cmd=["rc", "run"],
     cmd_help={
         "help": "Reply To Any Programming Language's Code To Eval In Telegram!",
@@ -189,7 +189,7 @@ async def any_lang_cmd_runner(client, message):
     )
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     cmd=["bash", "terminal"],
     ignore_errors=True,
     cmd_help={"help": "Run Bash/Terminal Command!", "example": "{ch}bash ls"},

@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -17,7 +17,7 @@ from database.blacklistdb import (
     get_chat_blacklist,
     is_blacklist_in_db,
 )
-from main_startup.core.decorators import friday_on_cmd, listen
+from main_startup.core.decorators import stylish_on_cmd, listen
 from main_startup.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -26,7 +26,7 @@ from main_startup.helper_func.basic_helpers import (
 from main_startup.helper_func.logger_s import LogIt
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     [
         "saveblacklist",
         "saveblockist",
@@ -54,7 +54,7 @@ async def addblacklist(client, message):
     await pablo.edit(f"`{blacklist}` `Successfully Added To Blacklist`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["listblacklist", "listblocklist"],
     cmd_help={"help": "Check Blacklist List!", "example": "{ch}listblocklist"},
 )
@@ -69,7 +69,7 @@ async def listblacklist(client, message):
     await edit_or_send_as_file(OUT_STR, pablo, client, "Blacklist", "blacklist")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["delblacklist", "rmblacklist", "delblockist", "rmblocklist"],
     cmd_help={
         "help": "Remove Text From Blacklist / Blocklist!",
@@ -115,7 +115,7 @@ async def activeblack(client, message):
     
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["delblacklists", "rmblacklists", "delblockists", "rmblocklists"],
     cmd_help={
         "help": "Remove Everything From Blocklist!",

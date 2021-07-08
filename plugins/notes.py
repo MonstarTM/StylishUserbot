@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/mohsinhsn/stylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -10,11 +10,11 @@ from pyrogram import filters
 
 from database.notesdb import add_note, all_note, del_note, del_notes, note_info
 from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd, listen
+from main_startup.core.decorators import stylish_on_cmd, listen
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["savenote"],
     cmd_help={
         "help": "Save Notes In The Chat!",
@@ -57,7 +57,7 @@ async def lmao(client, message):
     
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["delnote"],
     cmd_help={"help": "Delete Note In The Chat!", "example": "{ch}delnote (Note Name)"},
 )
@@ -75,7 +75,7 @@ async def notes(client, message):
     await note_.edit(f"`Note {note_name} Deleted Successfully!`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["delnotes"],
     cmd_help={"help": "Delete All The Notes In The Chat!", "example": "{ch}delnotes"},
 )
@@ -89,7 +89,7 @@ async def noteses(client, message):
     await pablo.edit("Deleted All The Notes Successfully!!")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["notes"],
     cmd_help={"help": "List All The Chat Notes!", "example": "{ch}notes"},
 )

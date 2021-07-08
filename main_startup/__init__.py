@@ -17,12 +17,12 @@ from .config_var import Config
 
 # Note StartUp Time - To Capture Uptime.
 start_time = time.time()
-friday_version = "V9.0"
+stylish_version = "V9.0"
 
 # Enable Logging For Pyrogram
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - [FridayUB] - %(levelname)s - %(message)s",
+    format="%(asctime)s - [StylishUB] - %(levelname)s - %(message)s",
 )
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 logging.getLogger("apscheduler").setLevel(logging.ERROR)

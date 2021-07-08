@@ -232,7 +232,7 @@ def resize_image(image):
         im = im.resize(sizenew)
     else:
         im.thumbnail(maxsize)
-    file_name = "Sticker_FridayUB.png"
+    file_name = "Sticker_stylishUB.png"
     im.save(file_name, "PNG")
     if os.path.exists(image):
         os.remove(image)

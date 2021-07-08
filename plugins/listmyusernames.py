@@ -1,18 +1,18 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/mohsinhsn/stylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
 import pyrogram
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, edit_or_send_as_file
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["listmyusernames"],
     cmd_help={
         "help": "Get All Admin Channel / Chat List",

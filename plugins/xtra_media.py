@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/Mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 from PIL import Image
 from pyrogram.types import InputMediaPhoto
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text, runcmd
 from main_startup.helper_func.gmdl import googleimagesdownload
 
@@ -32,7 +32,7 @@ if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["lg"],
     cmd_help={
         "help": "Mess The Animated Sticker!",
@@ -76,7 +76,7 @@ async def lgo(client, message):
     await pablo.delete()
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["reverse"],
     cmd_help={
         "help": "Reverse Search Images / Stickers Using Google Reverse Search!",
@@ -171,7 +171,7 @@ async def ParseSauce(googleurl):
     return results
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["yandex"],
     cmd_help={
         "help": "Reverse Search Images / Stickers Using Yandex Reverse Search!",
@@ -205,18 +205,18 @@ async def yandex_(client, message):
 Reverse Searched Link:- {img_search_url}
 Note:- Yandex is a Russian search engine, so better open link in chrome with auto-translate.
 Another Note:- Don't Use This Command continually, Yandex Will Block Your Request.
-<u><b>Reverse Search Completed By Friday.
-Get Your Own Friday From @FRIDAYCHAT.</b></u>
+<u><b>Reverse Search Completed By Stylish.
+Get Your Own StylishUB From @stylishUser.</b></u>
 """
     await pablo.edit(caption, parse_mode="HTML")
     os.remove(imoge)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["img", "googleimage", "image", "gi"],
     cmd_help={
         "help": "Search Images In Telegram Itself",
-        "example": "{ch}img fridayuserbot",
+        "example": "{ch}img stylishuserbot",
     },
 )
 async def img_search(client, message):
@@ -250,7 +250,7 @@ async def img_search(client, message):
     await pablo.delete()
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["waifuwrite", "wq"],
     cmd_help={
         "help": "Make Cool Stickers Using @stickerizerbot",

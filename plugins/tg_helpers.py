@@ -1,12 +1,12 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/Mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -15,7 +15,7 @@ from main_startup.helper_func.basic_helpers import (
 )
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["updatefirstname", "firstname"],
     cmd_help={
         "help": "Change Your Account First Name!",
@@ -41,7 +41,7 @@ async def bleck_name(client, message):
     await owo.edit(f"`Firstname Sucessfully Changed To {new_firstname} !`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["updatebio", "bio"],
     cmd_help={"help": "Change Your Account Bio!", "example": "{ch}bio (new bio)"},
 )
@@ -62,7 +62,7 @@ async def bleck_bio(client, message):
     await owo.edit(f"`Bio Sucessfully Changed To {new_bio} !`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["updateusername", "username"],
     cmd_help={
         "help": "Change Your Account UserName!",
@@ -85,7 +85,7 @@ async def bleck_username(client, message):
     await owo.edit(f"`Username Sucessfully Changed To {new_username} !`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["updatelastname", "lastname"],
     cmd_help={
         "help": "Change Your Account Last Name!",
@@ -110,7 +110,7 @@ async def bleck_name(client, message):
         return
     await owo.edit(f"`Lastname Sucessfully Changed To {new_lastname} !`")
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["join"],
     cmd_help={
         "help": "Join A Chat Easily.",
@@ -132,7 +132,7 @@ async def join_(client, message):
         return
     await owo.edit(f"`Sucessfully, Joined This Chat.`")
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["leave"],
     group_only=True,
     cmd_help={
@@ -145,7 +145,7 @@ async def leave_(client, message):
     await client.leave_chat(message.chat.id)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["updateppic", "ppic"],
     cmd_help={
         "help": "Change Your Profile Picture!",
@@ -179,7 +179,7 @@ async def bleck_pic(client, message):
     await owo.edit("`Sucessfully, Updated Profile Pic!`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["poll"],
     group_only=True,
     cmd_help={
@@ -205,7 +205,7 @@ async def create_poll(client, message):
     await msg.delete()
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["dump"],
     cmd_help={
         "help": "Get Pyrogram Message Dumbs!",
@@ -222,7 +222,7 @@ async def dumb_er(client, message):
     await edit_or_send_as_file(owo, ow, client, "Json-Dump", "Dump", "md")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["purgeme"],
     cmd_help={
         "help": "Purge Your Own Message Until Given Limit!",
@@ -256,11 +256,11 @@ async def pur_ge_me(client, message):
     await nice_p.edit(f"`Purged {to_purge} Messages!`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["invite", "add"],
     cmd_help={
         "help": "Add Users To Channel / Groups!",
-        "example": "{ch}invite @Midhun_xD @chsaiujwal @meisnub",
+        "example": "{ch}invite @patroneous @monstar_0 @tithonus",
     },
 )
 async def add_user_s_to_group(client, message):
@@ -278,11 +278,11 @@ async def add_user_s_to_group(client, message):
     await mg.edit(f"`Sucessfully Added {len(user_list)} To This Group / Channel!`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["a2c"],
     cmd_help={
         "help": "Add Users To Your Contacts!",
-        "example": "{ch}a2c @Meisnub",
+        "example": "{ch}a2c @tanya",
     },
 )
 async def add_user_s_to_contact(client, message):

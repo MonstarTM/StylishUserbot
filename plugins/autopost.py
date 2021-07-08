@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by MohsinHsn@Github, < https://github.com/MohsinHsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/MohsinHsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/MohsinHsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -16,15 +16,15 @@ from database.autopostingdb import (
     del_autopost,
     get_autopost,
 )
-from main_startup.core.decorators import friday_on_cmd, listen
+from main_startup.core.decorators import stylish_on_cmd, listen
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["autopost"],
     cmd_help={
         "help": "Add Channel To AutoPost List!",
-        "example": "{ch}autopost @fridaysupportofficial",
+        "example": "{ch}autopost @stylishUser",
     },
     chnnl_only=True,
 )
@@ -52,11 +52,11 @@ async def autopost(client, message):
     await pablo.edit(f"`Added AutoPosting To This Channel From {chnnl}`")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["rmautopost"],
     cmd_help={
         "help": "Remove A Channel From Autopost List",
-        "example": "{ch}rmautopost @fridaysupportofficial",
+        "example": "{ch}rmautopost @stylishUser",
     },
     chnnl_only=True,
 )

@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/Mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -13,11 +13,11 @@ import requests
 import wget
 from youtube_dl import YoutubeDL
 from youtubesearchpython import SearchVideos
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply, get_text, progress, humanbytes
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["utubevid", "ytv"],
     cmd_help={
         "help": "Download YouTube Videos just with name!",
@@ -85,7 +85,7 @@ async def yt_vid(client, message):
         if files and os.path.exists(files):
             os.remove(files)
             
-@friday_on_cmd(
+@stylish_on_cmd(
     ["ytdl"],
     cmd_help={
         "help": "Download All Contents Supported by youtube_dl",
@@ -143,7 +143,7 @@ async def yt_dl_(client, message):
     if os.path.exists(file_stark):
         os.remove(file_stark)
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["ytmusic", "yta"],
     cmd_help={
         "help": "Download YouTube Music just with name!",
@@ -227,7 +227,7 @@ async def ytmusic(client, message):
             os.remove(files)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["deezer", "dsong"],
     cmd_help={
         "help": "Download Songs From Deezer Just With Name!",
@@ -270,9 +270,9 @@ async def deezer(client, message):
 **Duration :** {urlhp.get('duration')} Seconds
 **Artist :** {polu.get("name")}
 
-Music Downloaded And Uploaded By Friday Userbot
+Music Downloaded And Uploaded By stylish Userbot
 
-Get Your Friday From @FridayOT"""
+Get Your StylishUB From @stylishUser"""
     await pablo.edit(f"`Downloaded {sname}! Now Uploading Song...`")
     await client.send_audio(
         message.chat.id,

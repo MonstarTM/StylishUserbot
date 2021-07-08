@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/Mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -18,7 +18,7 @@ from os import environ, execle, path, remove
 import psutil
 from pyrogram import __version__
 
-from main_startup import Config, friday_version, start_time
+from main_startup import Config, stylish_version, start_time
 from main_startup.core.decorators import friday_on_cmd
 from main_startup.helper_func.basic_helpers import (
     delete_or_pass,
@@ -28,7 +28,7 @@ from main_startup.helper_func.basic_helpers import (
 )
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["ping", "pong"],
     cmd_help={"help": "Check Bot Uptime!", "example": "{ch}ping"},
 )
@@ -48,7 +48,7 @@ async def pingy(client, message):
     )
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["alive"],
     cmd_help={"help": "Get Alive Message Of Your Bot.!", "example": "{ch}alive"},
 )
@@ -58,9 +58,9 @@ async def amialive(client, message):
     du = psutil.disk_usage(client.workdir)
     disk = f"{humanbytes(du.used)} / {humanbytes(du.total)} " f"({du.percent}%)"
     alive = f"""
-**{me_}'s Friday-UserBot is Alive!**
+**{me_}'s Stylish-UserBot is Alive!**
 
-➔ **Version :** __{friday_version}__
+➔ **Version :** __{stylish_version}__
 ➔ **Uptime :** __{get_readable_time((time.time() - start_time))}__
 ➔ **PyroGram Version :** __{__version__}__
 ➔ **Python Version :** __{platform.python_version()}__
@@ -80,7 +80,7 @@ async def amialive(client, message):
     await delete_or_pass(message)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["sysinfo", "neofetch"],
     cmd_help={"help": "Get System Information!", "example": "{ch}sysinfo"},
 )
@@ -121,7 +121,7 @@ async def give_sysinfo(client, message):
     await edit_or_reply(message, neat_msg)
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["restart"],
     cmd_help={"help": "Restart Your Bot!", "example": "{ch}restart"},
 )

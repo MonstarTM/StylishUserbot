@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/mohsinhsn/StylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/mohsinhsn/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -16,7 +16,7 @@ import heroku3
 from pyrogram.types import ChatPermissions
 
 from main_startup.config_var import Config
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import (
     edit_or_reply,
     edit_or_send_as_file,
@@ -55,7 +55,7 @@ def _check_heroku(func):
     return heroku_cli
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["reboot"],
     cmd_help={"help": "Restart Your Userbot On HEROKU!", "example": "{ch}restart"},
 )
@@ -65,7 +65,7 @@ async def gib_restart(client, message, hap):
     hap.restart()
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["logs"], cmd_help={"help": "Get Logs From HEROKU!", "example": "{ch}logs"}
 )
 @_check_heroku
@@ -76,7 +76,7 @@ async def gib_logs(client, message, happ):
     await edit_or_send_as_file(logs, msg_, client, capt, "logs")
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["setvar"],
     cmd_help={
         "help": "Set Var From telegram Itself, Please Seperate Var And Value With '|'",
@@ -103,7 +103,7 @@ async def set_varr(client, message, app_):
     heroku_var[_varname] = _varvalue
 
 
-@friday_on_cmd(
+@stylish_on_cmd(
     ["delvar"],
     cmd_help={
         "help": "Delete Var From telegram Itself",

@@ -60,7 +60,7 @@ async def load_unofficial_modules():
 async def fetch_plugins_from_channel():
     """Fetch Plugins From Channel"""
     try:
-        async for message in Friday.search_messages(
+        async for message in Stylish.search_messages(
             Config.PLUGIN_CHANNEL, filter="document", query=".py"
         ):
             hmm = message.document.file_name

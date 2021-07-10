@@ -67,7 +67,7 @@ $ python(3) -m main_startup
 ### Plugins 🔧
 
 ```python3
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import edit_or_reply
 
 @stylish_on_cmd(['helloworld'],

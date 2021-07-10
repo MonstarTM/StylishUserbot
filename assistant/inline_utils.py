@@ -255,7 +255,7 @@ async def owo(client, inline_query):
         ]
         if Config.LOAD_UNOFFICIAL_PLUGINS:
             total_ = len(XTRA_CMD_LIST) + len(CMD_LIST)
-        nice_text = f"**StylishUserBot Commands** \n**Stylish Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{total_}__"
+        nice_text = f"**StylishUserBot Commands** \n**Stylish Version :** __{stylish_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{total_}__"
         await client.answer_inline_query(
             inline_query.id,
             cache_time=0,

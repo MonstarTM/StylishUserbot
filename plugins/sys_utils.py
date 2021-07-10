@@ -19,7 +19,7 @@ import psutil
 from pyrogram import __version__
 
 from main_startup import Config, stylish_version, start_time
-from main_startup.core.decorators import friday_on_cmd
+from main_startup.core.decorators import stylish_on_cmd
 from main_startup.helper_func.basic_helpers import (
     delete_or_pass,
     edit_or_reply,

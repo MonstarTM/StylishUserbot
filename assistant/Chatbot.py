@@ -1,8 +1,8 @@
-# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+# Copyright (C) 2020-2021 by mohsinhsn@github, < https://github.com/mohsinhsn >.
 #
-# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# This file is part of < https://github.com/mohsinhsn/stylishUserBot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+# Please see < https://github.com/stylish/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -14,11 +14,11 @@ from database.chatbot_db import (
     rm_blacklisted_user,
 )
 from database.chatbot_msg_db import add_msg_in_db, get_user_id_frm_msg_id
-from main_startup.__main__ import Friday, bot
+from main_startup.__main__ import stylish, bot
 
 
 async def my_id_(f, client, message):
-    me = Friday.me.id
+    me = stylish.me.id
     if message.from_user.id == me:
         return bool(True)
     else:

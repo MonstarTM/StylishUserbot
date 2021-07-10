@@ -129,7 +129,7 @@ async def aexec(code, client, message):
     cmd=["rc", "run"],
     cmd_help={
         "help": "Reply To Any Programming Language's Code To Eval In Telegram!",
-        "example": "{ch}run python print('FridayUserBot')",
+        "example": "{ch}run python print('StylishUserBot')",
     },
 )
 async def any_lang_cmd_runner(client, message):
@@ -209,7 +209,7 @@ async def sed_terminal(client, message):
     pid, err, out, ret = await run_command(cmd)
     if not out:
         out = "No OutPut!"
-    friday = f"""**▶ CMD :**
+    stylish = f"""**▶ CMD :**
 `{cmd}`
 
 **▶ PID :**

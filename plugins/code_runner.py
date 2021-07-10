@@ -224,7 +224,7 @@ async def sed_terminal(client, message):
 **▶ Return Code :** 
 `{ret}`
 """
-    await edit_or_send_as_file(friday, stark, client, cmd, "bash-result")
+    await edit_or_send_as_file(stylish, stark, client, cmd, "bash-result")
 
 
 async def run_command(cmd):

@@ -14,8 +14,6 @@ print(stylish_)
 
 api_id = input("Enter Your API ID: \n")
 api_hash = input("Enter Your API HASH : \n")
-bot_token = input("Enter Your BOT TOKEN : \n")
-
 
 with Client("StylishUB", api_id=api_id, api_hash=api_hash) as bot_:
     first_name = (bot_.get_me()).first_name

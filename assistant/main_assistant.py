@@ -39,7 +39,7 @@ async def start(client, message):
     bot_username = starkbot.username
     firstname = message.from_user.first_name
     user_id = message.from_user.id
-    starttext = f"`Hello, {firstname} ! Nice To Meet You, Well I Am {bot_name}, An Powerfull Assistant Bot To Talk And Do Many Things For My Master!`. \n\nPowered By [Stylish Userbot](t.me/StylishUser)"
+    starttext = f"`Hello, {firstname} ! Nice To Meet You, Well I Am {bot_name}, An Powerfull Assistant Bot To Talk And Do Many Things For My Boss!`. \n\nPowered By [Stylish Userbot](t.me/StylishUser)"
     mypic = Config.ASSISTANT_START_PIC
     if user_id not in all_user_s:
         await client.send_photo(
@@ -54,7 +54,7 @@ async def start(client, message):
         if not kok:
             await add_user(user_id)
     else:
-        message87 = f"Hi Master, It's Me {bot_name}, Your Assistant ! \nWhat You Wanna Do today ?"
+        message87 = f"Hi Boss, It's Me {bot_name}, Your Assistant ! \nWhat You Wanna Do today ?"
         await client.send_photo(
             message.chat.id,
             mypic,
@@ -79,7 +79,7 @@ async def start(client, message):
 
 @bot.on_callback_query(filters.regex("cmdgiv"))
 async def cmdgiv(client, cb):
-    grabon = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr (lang-code) \n➤ /tts (lang-code) \n➤ /promote - Promote a user \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Chat \n➤ /info - Shows INFO of User \n➤ /users - Get List Of Users In dB. "
+    grabon = "Hello, these are your Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr (lang-code) \n➤ /tts (lang-code) \n➤ /promote - Promote a user \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Chat \n➤ /info - Shows INFO of User \n➤ /users - Get List Of Users In dB. "
     await cb.edit_message_text(grabon)
 
 
@@ -88,14 +88,14 @@ async def cmdgiv(client, cb):
 async def alive(client, message):
     lol = client.me
     await message.reply(
-        f"`Yo ! {message.from_user.first_name} , I am Alive. Need Help ? How Are You? 🤟`"
+        f"`Yo ! {message.from_user.first_name} , I am Alive. Need any Help ? How Are You? 🤟`"
     )
 
 
 @bot.on_message(filters.command(["help"]) & filters.incoming)
 @_check_owner_or_sudos
 async def fuckinhelp(client, message):
-    grabon = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr (lang-code) \n➤ /tts (lang-code) \n➤ /promote - Promote a user \n➤ /demote - Demote a user \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Chat \n➤ /info - Shows INFO of User \n➤ /users - Get List Of Users In dB. "
+    grabon = "Hello, these are your Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr (lang-code) \n➤ /tts (lang-code) \n➤ /promote - Promote a user \n➤ /demote - Demote a user \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Chat \n➤ /info - Shows INFO of User \n➤ /users - Get List Of Users In dB. "
     await message.reply(grabon)
 
 

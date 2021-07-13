@@ -67,7 +67,7 @@ async def fetch_plugins_from_channel():
             if os.path.exists(os.path.join("./plugins/", hmm)):
                 pass
             else:
-                await stylish.download_media(message, file_name="./plugins/")
+                await Stylish.download_media(message, file_name="./plugins/")
     except BaseException as e:
         logging.error(f"Failed! To Install Plugins From Plugin Channel Due To {e}!")
         return

@@ -1,7 +1,7 @@
 import pyrogram
 from pyrogram import Client
 
-Stylish_ = """
+stylish_ = """
 STYLISH USERBOT
 Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 This file is part of < https://github.com/mohsinhsn/StylishUserBot > project,

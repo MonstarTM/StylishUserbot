@@ -2,7 +2,12 @@ import pyrogram
 from pyrogram import Client
 
 stylish_ = """
-STYLISH USERBOT
+____  _         _ _     _     
+/ ___|| |_ _   _| (_)___| |__  
+\___ \| __| | | | | / __| '_ \ 
+ ___) | |_| |_| | | \__ \ | | |
+|____/ \__|\__, |_|_|___/_| |_|
+           |___/
 Copyright (C) 2020-2021 by mohsinhsn@Github, < https://github.com/mohsinhsn >.
 This file is part of < https://github.com/mohsinhsn/StylishUserBot > project,
 and is released under the "GNU v3.0 License Agreement".

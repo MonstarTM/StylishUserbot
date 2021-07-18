@@ -343,7 +343,7 @@ async def pmPermit(client, message):
     user_firstname = message.from_user.first_name
     user_mention = message.from_user.mention
     me_f = client.me.first_name
-    de_pic = "logo.jpg"
+    de_pic = "IMG_20210707_232933_367.jpg"
     if capt:
         holy = await client.copy_message(
                 from_chat_id=int(Config.LOG_GRP),

@@ -18,10 +18,10 @@ from main_startup.helper_func.basic_helpers import edit_or_reply, get_text, prog
 
 
 @stylish_on_cmd(
-    ["utubevid", "ytv"],
+    ["video", "ytv"],
     cmd_help={
         "help": "Download YouTube Videos just with name!",
-        "example": "{ch}utubevid (video name OR link)",
+        "example": "{ch}video (video name OR link)",
     },
 )
 async def yt_vid(client, message):
@@ -144,10 +144,10 @@ async def yt_dl_(client, message):
         os.remove(file_stark)
 
 @stylish_on_cmd(
-    ["ytmusic", "yta"],
+    ["song", "yta"],
     cmd_help={
         "help": "Download YouTube Music just with name!",
-        "example": "{ch}ytmusic (song name OR link)",
+        "example": "{ch}song (song name OR link)",
     },
 )
 async def ytmusic(client, message):
@@ -272,7 +272,7 @@ async def deezer(client, message):
 
 Music Downloaded And Uploaded By stylish Userbot
 
-Get Your StylishUB From @stylishUser"""
+Get Your StylishUB From @StylishUser"""
     await pablo.edit(f"`Downloaded {sname}! Now Uploading Song...`")
     await client.send_audio(
         message.chat.id,

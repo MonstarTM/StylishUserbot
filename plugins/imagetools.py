@@ -355,7 +355,7 @@ async def getfakecertificate(client, message):
     if not text:
         await pablo.edit("Please Give Name For Certificate")
         return
-    famous_people = ["Modi", "Trump", "Albert", "mujib", "hasina", "mohsin"]
+    famous_people = [" Mujib", "Trump", "Albert", "Sakib", "Hasina", "Mohsin"]
     img = Image.open("./bot_utils_files/image_templates/certificate_templete.png")
     d1 = ImageDraw.Draw(img)
     myFont = ImageFont.truetype("./bot_utils_files/Fonts/impact.ttf", 200)
@@ -493,8 +493,8 @@ async def wewnews(client, message):
     d1 = ImageDraw.Draw(im)
     myFont = ImageFont.truetype("./bot_utils_files/Fonts/live_news_font.ttf", 165)
     d1.text((7, 1251), text, font=myFont, fill=(0, 0, 0))
-    im.save("Fridaylivenews.png")
-    file_name = "Fridaylivenews.png"
+    im.save("stylishnews.png")
+    file_name = "stylishnews.png"
     ok = file_name
     if message.reply_to_message:
         await client.send_photo(
@@ -660,8 +660,8 @@ async def ph(client, message):
     myFont = ImageFont.truetype("./bot_utils_files/Fonts/ph_comment_font.TTF", 100)
     d1.text((300, 700), username, font=myFont, fill=(135, 98, 87))
     d1.text((12, 1000), texto, font=myFont, fill=(203, 202, 202))
-    img.save("FRIDAYOT.jpg")
-    file_name = "FRIDAYOT.jpg"
+    img.save("Stylish.jpg")
+    file_name = "Stylish.jpg"
     ok = file_name
     if message.reply_to_message:
         await client.send_photo(
@@ -887,7 +887,7 @@ async def adityalogo(client, message):
         font=font,
         fill=(255, 255, 0),
     )
-    file_name = "LogoBy@MeisNub.png"
+    file_name = "LogoBy@StylishUser.png"
     await client.send_chat_action(message.chat.id, "upload_photo")
     img.save(file_name, "png")
     if message.reply_to_message:

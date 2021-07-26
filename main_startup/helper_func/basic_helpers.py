@@ -26,9 +26,16 @@ from pyrogram.types import (
 )
 
 from main_startup import Stylish, Stylish2, Stylish3, Stylish4
+from database.sudodb import sudo_list
 from main_startup.config_var import Config
-
+import multiprocessing
 import mimetypes
+import functools
+import threading
+from concurrent.futures import ThreadPoolExecutor
+
+max_workers = multiprocessing.cpu_count() * 5
+exc_ = ThreadPoolExecutor(max_workers=max_workers)
 
 
 def guess_mime_type(file_):

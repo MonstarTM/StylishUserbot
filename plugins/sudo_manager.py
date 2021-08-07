@@ -15,8 +15,8 @@ from database.sudodb import is_user_sudo, sudo_list, add_sudo, rm_sudo
 from plugins import devs_id
 
 
-@stylish_on_cmd(['addsudo'],
-              disable_sudo=True,
+@stylish_on_cmd(
+              ['addsudo'],
               cmd_help={
                 "help": "Add User To Sudo List.",
                 "example": "{ch}addsudo (reply_to_user)",
@@ -42,8 +42,8 @@ async def add_s_sudo(client, message):
     await add_sudo(int(user.id))
     await msg_.edit(engine.get_string("ADDED_TO_SUDO").format(user.mention))
     
-@stylish_on_cmd(['rmsudo'],
-              disable_sudo=True,
+@stylish_on_cmd(
+              ['rmsudo'],
               cmd_help={
                 "help": "Remove User From Sudo List.",
                 "example": "{ch}rmsudo (reply_to_user)",

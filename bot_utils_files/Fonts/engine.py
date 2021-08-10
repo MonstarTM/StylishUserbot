@@ -1,3 +1,4 @@
+
 import logging
 
 import os
@@ -18,13 +19,13 @@ from main_startup import (
 
     Config,
 
-    Friday,
+    Stylish,
 
-    Friday2,
+    Stylish2,
 
-    Friday3,
+    Stylish3,
 
-    Friday4,
+    Stylish4,
 
     bot
 
@@ -36,7 +37,7 @@ class Engine:
 
     def __init__(self):
 
-        self.path = "./bot_utils_files/Localization/strings/"
+        self.path = "./bot_utils_files/Fonts/strings/"
 
         
 

@@ -34,9 +34,28 @@ from main_startup import (
 )
 from main_startup.config_var import Config
 from main_startup.helper_func.basic_helpers import is_admin_or_owner
-
 from .helpers import edit_or_reply
+from database.sudodb import sudo_list
 
+from bot_utils_files.Localization.engine import Engine as engin_e
+
+Engine = engin_e()
+
+
+sudo_list_ = Friday.loop.create_task(sudo_list())
+
+async def _sudo(f, client, message):
+    if not message:
+        return bool(False)
+    if not message.from_user:
+        return bool(False)
+    if not message.from_user.id:
+        return bool(False)
+    if message.from_user.id in sudo_list_.result():
+        return bool(True)
+    return bool(False)
+
+_sudo = filters.create(func=_sudo, name="_sudo")
 
 def stylish_on_cmd(
     cmd: list,
@@ -47,11 +66,13 @@ def stylish_on_cmd(
     only_if_admin: bool = False,
     ignore_errors: bool = False,
     propagate_to_next_handler: bool = True,
+    disable_sudo: bool = False,
     file_name: str = None,
     is_official: bool = True,
     cmd_help: dict = {"help": "No One One Gonna Help You", "example": "{ch}what"},
 ):
     """- Main Decorator To Register Commands. -"""
+    if disable_sudo:
     filterm = (
         (filters.me | filters.user(Config.AFS))
         & filters.command(cmd, Config.COMMAND_HANDLER)

@@ -69,7 +69,7 @@ class Engine:
 
     def get_string(self, string):
 
-        lang_ = Friday.selected_lang
+        lang_ = Stylish.selected_lang
 
         return (
 

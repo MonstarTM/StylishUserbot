@@ -73,7 +73,7 @@ def stylish_on_cmd(
 ):
     """- Main Decorator To Register Commands. -"""
     if disable_sudo:
-    filterm = (
+        filterm = (
         (filters.me | filters.user(Config.AFS))
         & filters.command(cmd, Config.COMMAND_HANDLER)
         & ~filters.via_bot

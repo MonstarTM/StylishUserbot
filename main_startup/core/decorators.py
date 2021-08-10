@@ -37,7 +37,7 @@ from main_startup.helper_func.basic_helpers import is_admin_or_owner
 from .helpers import edit_or_reply
 from database.sudodb import sudo_list
 
-from bot_utils_files.Localization.engine import Engine as engin_e
+from bot_utils_files.Fonts.engine import Engine as engin_e
 
 Engine = engin_e()
 
